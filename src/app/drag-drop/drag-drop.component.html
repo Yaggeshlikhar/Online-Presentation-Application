@@ -1,0 +1,19 @@
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Your PPT Application</h1>
+    </div>
+    <div class="options">
+      <input type="file" value="Add Image" (change)="addImage($event)">
+      <input type="button" value="Add Text" (click)="addText($event)">
+    </div>
+    <div class="main-slide container" (drop)="drop($event)" (dragover)="allowDrop($event)" id="item1">
+      <img id="dragImage" style="position: absolute" src="{{url}}" draggable="true" (drag)="drag($event)"
+           width="{{width}}" height="{{height}}">
+  
+    </div>
+  
+  
+  </div>
+  
+  </body>
